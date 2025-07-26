@@ -119,11 +119,26 @@ class StudyTopic(BaseModel):
     estimated_hours: Optional[float] = Field(default=None, description="Estimated study hours for this topic")
     subtopics: Optional[List[str]] = Field(default=None, description="List of subtopics")
 
+class TimelineMilestone(BaseModel):
+    date: str = Field(..., description="Milestone date in YYYY-MM-DD format")
+    title: str = Field(..., description="Milestone title")
+    description: str = Field(..., description="Milestone description")
+    type: str = Field(..., description="Milestone type: review, exam, checkpoint, etc.")
+    topics: List[str] = Field(default=[], description="Topics associated with this milestone")
+    completion_target: int = Field(default=0, ge=0, le=100, description="Expected completion percentage")
+    completed: Optional[bool] = Field(default=False, description="Whether milestone is completed")
+    completed_at: Optional[str] = Field(default=None, description="Completion timestamp")
+    study_focus: Optional[str] = Field(default=None, description="Main focus area for this study period")
+    study_activities: Optional[List[str]] = Field(default=None, description="Recommended study activities")
+    learning_objectives: Optional[List[str]] = Field(default=None, description="Learning objectives for this period")
+
 class TimelineData(BaseModel):
     total_days: int = Field(..., description="Total days until exam")
     days_remaining: int = Field(..., description="Days remaining until exam")
     study_intensity: str = Field(..., description="Study intensity level")
     weekly_breakdown: List[Dict[str, Any]] = Field(..., description="Weekly study breakdown")
+    milestones: List[TimelineMilestone] = Field(default=[], description="Important dates and milestones")
+    exam_countdown: Dict[str, Any] = Field(..., description="Exam countdown information")
 
 class StudyStatistics(BaseModel):
     total_topics: int = Field(..., description="Total number of topics identified")

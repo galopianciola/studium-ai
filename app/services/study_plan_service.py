@@ -108,6 +108,8 @@ REQUERIMIENTOS ADICIONALES:
 - Proporciona recomendaciones generales de estudio
 - Estima el tiempo necesario para cada actividad
 - Identifica subtemas importantes dentro de cada tema principal
+- Crea hitos importantes en el cronograma (repasos generales, evaluaciones intermedias, etc.)
+- Establece fechas clave como puntos de control del progreso
 
 IMPORTANTE: Todos los nombres de temas, descripciones y recomendaciones deben estar en ESPAÑOL.
 
@@ -149,6 +151,41 @@ REQUIRED JSON FORMAT (strict format, valid JSON only):
     "study_techniques": [
         "technique1",
         "technique2"
+    ],
+    "milestones": [
+        {{
+            "date": "2025-01-10",
+            "title": "Primera Evaluación",
+            "description": "Revisar los primeros temas estudiados",
+            "type": "checkpoint",
+            "topics": ["topic1", "topic2"],
+            "completion_target": 30,
+            "study_focus": "Consolidar conceptos básicos y fundamentos",
+            "study_activities": ["Resúmenes de conceptos clave", "Práctica con ejercicios básicos", "Flashcards de definiciones"],
+            "learning_objectives": ["Dominar vocabulario fundamental", "Entender conceptos básicos", "Identificar patrones principales"]
+        }},
+        {{
+            "date": "2025-01-15",
+            "title": "Repaso General Parcial",
+            "description": "Revisar todos los temas estudiados hasta la fecha",
+            "type": "review",
+            "topics": ["topic1", "topic2", "topic3"],
+            "completion_target": 60,
+            "study_focus": "Integrar conocimientos y hacer conexiones entre temas",
+            "study_activities": ["Mapas conceptuales", "Resolución de problemas complejos", "Simulacros de examen"],
+            "learning_objectives": ["Conectar diferentes temas", "Aplicar conocimientos en casos prácticos", "Identificar áreas débiles"]
+        }},
+        {{
+            "date": "2025-01-20",
+            "title": "Repaso Final",
+            "description": "Repaso intensivo de todos los temas antes del examen",
+            "type": "final_review",
+            "topics": ["all_topics"],
+            "completion_target": 90,
+            "study_focus": "Repaso intensivo y perfeccionamiento de todos los temas",
+            "study_activities": ["Exámenes de práctica", "Repaso de notas y resúmenes", "Técnicas de memorización"],
+            "learning_objectives": ["Perfeccionar conocimientos", "Ganar confianza", "Optimizar estrategias de examen"]
+        }}
     ],
     "statistics": {{
         "total_topics": 10,
@@ -353,7 +390,8 @@ CRITICAL: Return ONLY valid JSON. No additional text, explanations, or markdown 
         daily_plan = [DailyStudyPlan(**day) for day in ai_plan.get("daily_plan", [])]
 
         # Generate timeline data
-        timeline = self._generate_timeline_data(daily_plan, days_remaining)
+        milestones_data = ai_plan.get("milestones", [])
+        timeline = self._generate_timeline_data(daily_plan, days_remaining, exam_date, milestones_data)
 
         # Generate statistics
         stats = ai_plan.get("statistics", {})
@@ -385,7 +423,7 @@ CRITICAL: Return ONLY valid JSON. No additional text, explanations, or markdown 
         }
 
     def _generate_timeline_data(
-        self, daily_plan: List[DailyStudyPlan], days_remaining: int
+        self, daily_plan: List[DailyStudyPlan], days_remaining: int, exam_date: str, milestones_data: List[Dict[str, Any]]
     ) -> TimelineData:
         """Generate timeline data for charts and visualization"""
 
@@ -429,12 +467,166 @@ CRITICAL: Return ONLY valid JSON. No additional text, explanations, or markdown 
         else:
             intensity = "baja"
 
+        # Process milestones from AI response
+        from ..models.schemas import TimelineMilestone
+        milestones = []
+        for milestone_data in milestones_data:
+            milestones.append(TimelineMilestone(**milestone_data))
+        
+        # Generate automatic milestones if not enough provided by AI
+        if len(milestones) < 2 and days_remaining > 7:
+            self._add_automatic_milestones(milestones, daily_plan, days_remaining, exam_date)
+        
+        # Add exam date as final milestone
+        milestones.append(TimelineMilestone(
+            date=exam_date,
+            title="¡Día del Examen!",
+            description="Fecha del examen final",
+            type="exam",
+            topics=[],
+            completion_target=100
+        ))
+        
+        # Sort milestones by date
+        milestones.sort(key=lambda m: datetime.strptime(m.date, "%Y-%m-%d"))
+        
+        # Create exam countdown information
+        exam_countdown = {
+            "days_left": days_remaining,
+            "exam_date": exam_date,
+            "countdown_message": f"¡Quedan {days_remaining} días para el examen!",
+            "urgency_level": "high" if days_remaining <= 7 else "medium" if days_remaining <= 14 else "low"
+        }
+
         return TimelineData(
             total_days=len(daily_plan),
             days_remaining=days_remaining,
             study_intensity=intensity,
             weekly_breakdown=weekly_breakdown,
+            milestones=milestones,
+            exam_countdown=exam_countdown,
         )
+
+    def _add_automatic_milestones(self, milestones: List, daily_plan: List[DailyStudyPlan], days_remaining: int, exam_date: str):
+        """Generate automatic milestones when AI doesn't provide enough"""
+        from ..models.schemas import TimelineMilestone
+        
+        today = datetime.now()
+        
+        # Create milestones at strategic intervals
+        if days_remaining >= 21:  # 3+ weeks
+            # Add milestones at 1/3, 2/3, and 90% of the way
+            intervals = [0.33, 0.66, 0.9]
+            titles = ["Revisión Temprana", "Revisión Intermedia", "Repaso Final"]
+            types = ["checkpoint", "review", "final_review"]
+            targets = [30, 70, 95]
+        elif days_remaining >= 14:  # 2+ weeks
+            intervals = [0.5, 0.85]
+            titles = ["Revisión Intermedia", "Repaso Final"]
+            types = ["review", "final_review"]
+            targets = [50, 90]
+        elif days_remaining >= 7:  # 1+ week
+            intervals = [0.7]
+            titles = ["Repaso Final"]
+            types = ["final_review"]
+            targets = [85]
+        else:
+            return  # Too close to exam for automatic milestones
+        
+        for interval, title, milestone_type, target in zip(intervals, titles, types, targets):
+            milestone_date = today + timedelta(days=int(days_remaining * interval))
+            milestone_date_str = milestone_date.strftime("%Y-%m-%d")
+            
+            # Get topics covered by this point
+            covered_topics = []
+            milestone_day = int(days_remaining * interval)
+            for day in daily_plan[:milestone_day]:
+                covered_topics.extend(day.topics)
+            
+            # Remove duplicates while preserving order
+            unique_topics = []
+            for topic in covered_topics:
+                if topic not in unique_topics:
+                    unique_topics.append(topic)
+            
+            # Generate study content based on milestone type
+            study_focus, study_activities, learning_objectives = self._generate_milestone_content(milestone_type)
+            
+            milestone = TimelineMilestone(
+                date=milestone_date_str,
+                title=title,
+                description=f"Revisar progreso y evaluar comprensión de los temas estudiados hasta ahora",
+                type=milestone_type,
+                topics=unique_topics[:5],  # Limit to first 5 topics
+                completion_target=target,
+                study_focus=study_focus,
+                study_activities=study_activities,
+                learning_objectives=learning_objectives
+            )
+            
+            milestones.append(milestone)
+
+    def _generate_milestone_content(self, milestone_type: str) -> tuple:
+        """Generate study content for automatic milestones"""
+        
+        if milestone_type == "checkpoint":
+            study_focus = "Consolidar fundamentos y verificar comprensión inicial"
+            study_activities = [
+                "Resumen de conceptos principales",
+                "Autoevaluación con preguntas básicas",
+                "Identificación de conceptos clave",
+                "Creación de flashcards"
+            ]
+            learning_objectives = [
+                "Dominar vocabulario y términos fundamentales",
+                "Entender conceptos básicos del área de estudio",
+                "Establecer bases sólidas para temas avanzados"
+            ]
+            
+        elif milestone_type == "review":
+            study_focus = "Integrar conocimientos y fortalecer conexiones entre temas"
+            study_activities = [
+                "Mapas conceptuales de temas relacionados",
+                "Resolución de problemas intermedios",
+                "Práctica con casos de estudio",
+                "Simulacros de evaluación parcial"
+            ]
+            learning_objectives = [
+                "Conectar diferentes temas y conceptos",
+                "Aplicar conocimientos en contextos diversos",
+                "Identificar y reforzar áreas de debilidad",
+                "Desarrollar pensamiento crítico"
+            ]
+            
+        elif milestone_type == "final_review":
+            study_focus = "Repaso intensivo y perfeccionamiento para el examen final"
+            study_activities = [
+                "Exámenes de práctica completos",
+                "Repaso intensivo de todos los temas",
+                "Técnicas de memorización y retención",
+                "Estrategias de manejo del tiempo en exámenes"
+            ]
+            learning_objectives = [
+                "Perfeccionar conocimientos en todos los temas",
+                "Ganar confianza y reducir ansiedad",
+                "Optimizar estrategias de examen",
+                "Lograr el máximo rendimiento académico"
+            ]
+        else:
+            # Default content
+            study_focus = "Revisar y consolidar conocimientos adquiridos"
+            study_activities = [
+                "Repaso de material estudiado",
+                "Práctica adicional",
+                "Autoevaluación"
+            ]
+            learning_objectives = [
+                "Reforzar comprensión",
+                "Mejorar retención",
+                "Prepararse para siguientes temas"
+            ]
+        
+        return study_focus, study_activities, learning_objectives
 
 
 # In-memory storage for study plans (use database in production)

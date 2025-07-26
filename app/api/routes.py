@@ -444,3 +444,83 @@ async def delete_study_plan(plan_id: str):
     except Exception as e:
         logger.error(f"Error deleting study plan {plan_id}: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to delete study plan")
+
+@router.post("/student/learn/plan/{plan_id}/milestone/{milestone_date}/complete", tags=["Study Plan"])
+async def complete_milestone(plan_id: str, milestone_date: str):
+    """Mark a milestone as completed"""
+    try:
+        from app.services.study_plan_service import study_plans_storage
+        
+        if plan_id not in study_plans_storage:
+            raise HTTPException(status_code=404, detail="Study plan not found")
+        
+        plan_data = study_plans_storage[plan_id]
+        
+        # Find and update the milestone
+        milestones = plan_data.get("timeline", {}).get("milestones", [])
+        milestone_found = False
+        
+        for milestone in milestones:
+            if milestone["date"] == milestone_date:
+                milestone["completed"] = True
+                milestone["completed_at"] = datetime.now().isoformat()
+                milestone_found = True
+                break
+        
+        if not milestone_found:
+            raise HTTPException(status_code=404, detail="Milestone not found")
+        
+        # Update the storage
+        study_plans_storage[plan_id] = plan_data
+        
+        return {
+            "message": "Milestone marked as completed",
+            "milestone_date": milestone_date,
+            "completed_at": milestone["completed_at"]
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error completing milestone: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to complete milestone")
+
+@router.delete("/student/learn/plan/{plan_id}/milestone/{milestone_date}/complete", tags=["Study Plan"])
+async def uncomplete_milestone(plan_id: str, milestone_date: str):
+    """Mark a milestone as not completed"""
+    try:
+        from app.services.study_plan_service import study_plans_storage
+        
+        if plan_id not in study_plans_storage:
+            raise HTTPException(status_code=404, detail="Study plan not found")
+        
+        plan_data = study_plans_storage[plan_id]
+        
+        # Find and update the milestone
+        milestones = plan_data.get("timeline", {}).get("milestones", [])
+        milestone_found = False
+        
+        for milestone in milestones:
+            if milestone["date"] == milestone_date:
+                milestone["completed"] = False
+                if "completed_at" in milestone:
+                    del milestone["completed_at"]
+                milestone_found = True
+                break
+        
+        if not milestone_found:
+            raise HTTPException(status_code=404, detail="Milestone not found")
+        
+        # Update the storage
+        study_plans_storage[plan_id] = plan_data
+        
+        return {
+            "message": "Milestone marked as not completed",
+            "milestone_date": milestone_date
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error uncompleting milestone: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to uncomplete milestone")
