@@ -185,3 +185,141 @@ activity_type
 2025-07-26 17:43:05,654 - root - INFO - Studium backend starting up...
 2025-07-26 17:44:27,821 - root - INFO - Studium backend shutting down...
 2025-07-26 17:44:28,990 - root - INFO - Studium backend starting up...
+2025-07-26 18:00:50,782 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/6968610f-feea-466c-a5f1-1587c3ff776d.pdf
+2025-07-26 18:00:50,789 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> 6968610f-feea-466c-a5f1-1587c3ff776d
+2025-07-26 18:00:50,959 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-26 18:00:50,969 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-26 18:01:19,464 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 18:01:19,520 - app.services.study_plan_service - ERROR - Claude study plan generation failed: Expecting ',' delimiter: line 83 column 10 (char 2842)
+2025-07-26 18:01:19,521 - app.services.study_plan_service - ERROR - Error generating AI study plan: Expecting ',' delimiter: line 83 column 10 (char 2842)
+2025-07-26 18:01:19,526 - app.api.routes - ERROR - Study plan generation error: 4 validation errors for StudyTopic
+name
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+importance
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+difficulty
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+description
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-26 18:07:08,529 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/b67a6dcf-294d-4a77-8cea-40a43f0ca511.pdf
+2025-07-26 18:07:08,533 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> b67a6dcf-294d-4a77-8cea-40a43f0ca511
+2025-07-26 18:07:08,639 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-26 18:07:08,642 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-26 18:08:19,888 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 18:08:19,917 - app.services.study_plan_service - ERROR - Claude study plan generation failed: Expecting ',' delimiter: line 83 column 10 (char 2752)
+2025-07-26 18:08:19,917 - app.services.study_plan_service - ERROR - Error generating AI study plan: Expecting ',' delimiter: line 83 column 10 (char 2752)
+2025-07-26 18:08:19,925 - app.api.routes - ERROR - Study plan generation error: 4 validation errors for StudyTopic
+name
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+importance
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+difficulty
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+description
+  Field required [type=missing, input_value={'nombre': 'Tema 1', 'imp... de frases crítica...'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-26 18:09:38,561 - root - INFO - Studium backend shutting down...
+2025-07-26 18:09:40,451 - root - INFO - Studium backend starting up...
+2025-07-26 18:10:07,834 - root - INFO - Studium backend shutting down...
+2025-07-26 18:10:08,906 - root - INFO - Studium backend starting up...
+2025-07-26 18:10:35,012 - root - INFO - Studium backend shutting down...
+2025-07-26 18:10:36,181 - root - INFO - Studium backend starting up...
+2025-07-26 18:11:10,081 - root - INFO - Studium backend shutting down...
+2025-07-26 18:11:11,068 - root - INFO - Studium backend starting up...
+2025-07-26 18:11:49,624 - root - INFO - Studium backend shutting down...
+2025-07-26 18:11:50,777 - root - INFO - Studium backend starting up...
+2025-07-26 18:12:56,502 - root - INFO - Studium backend shutting down...
+2025-07-26 18:12:57,510 - root - INFO - Studium backend starting up...
+2025-07-26 18:13:50,694 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/bce8e214-8a5f-4dbb-8164-820d66f6ba1b.pdf
+2025-07-26 18:13:50,697 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> bce8e214-8a5f-4dbb-8164-820d66f6ba1b
+2025-07-26 18:13:50,815 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 18:13:50,817 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 18:14:14,842 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 18:14:14,866 - app.api.routes - INFO - Generated study plan 8c537990-3442-4df8-bf8a-b57a5c8a65fe in 11.72s
+2025-07-26 18:17:04,900 - app.services.document_processor - INFO - File saved: brief de ideas.pdf -> uploads/b221fef6-07de-42b5-934d-02c41c1c5d6c.pdf
+2025-07-26 18:17:04,906 - app.api.routes - INFO - File uploaded successfully: brief de ideas.pdf -> b221fef6-07de-42b5-934d-02c41c1c5d6c
+2025-07-26 18:17:05,118 - app.services.document_processor - INFO - Extracted text from PDF: 12467 characters
+2025-07-26 18:17:05,121 - app.services.document_processor - INFO - Document processed successfully: 1730 words extracted
+2025-07-26 18:17:26,431 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 18:17:26,454 - app.api.routes - INFO - Generated study plan 175f9223-72d7-43ae-aaab-845554277e58 in 14.09s
+2025-07-26 18:18:28,614 - root - INFO - Studium backend shutting down...
+2025-07-26 18:18:30,185 - root - INFO - Studium backend starting up...
+2025-07-26 18:18:57,955 - root - INFO - Studium backend shutting down...
+2025-07-26 18:18:58,968 - root - INFO - Studium backend starting up...
+2025-07-26 18:19:12,310 - root - INFO - Studium backend shutting down...
+2025-07-26 18:19:13,492 - root - INFO - Studium backend starting up...
+2025-07-26 18:19:21,980 - root - INFO - Studium backend shutting down...
+2025-07-26 18:19:22,906 - root - INFO - Studium backend starting up...
+2025-07-26 18:19:35,345 - root - INFO - Studium backend shutting down...
+2025-07-26 18:19:36,320 - root - INFO - Studium backend starting up...
+2025-07-26 18:22:36,443 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/8544bddf-ba9d-4fe9-89ff-c7f6ba864ce9.pdf
+2025-07-26 18:22:36,446 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> 8544bddf-ba9d-4fe9-89ff-c7f6ba864ce9
+2025-07-26 18:22:36,586 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 18:22:36,590 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 18:22:57,983 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 18:22:58,009 - app.services.study_plan_service - ERROR - JSON parsing error: Expecting property name enclosed in double quotes: line 83 column 9 (char 3212)
+2025-07-26 18:22:58,011 - app.services.study_plan_service - ERROR - Content around error: statistics": {
+        "total_topics": 8,
+        
+2025-07-26 18:22:58,011 - app.services.study_plan_service - ERROR - Cleaned JSON still invalid: Expecting ',' delimiter: line 1 column 2506 (char 2505)
+2025-07-26 18:22:58,011 - app.services.study_plan_service - ERROR - Cleaned JSON: {     "main_topics": [         {             "name": "Análisis Comercial 5C's",             "importance": 5,             "difficulty": "medium",             "description": "Contexto, Compañía, Consumidor, Competencia y Colaboradores de Vichy",             "estimated_hours": 3.0,             "subtopics": ["Contexto mercado", "Análisis L'Oréal", "Perfil consumidor", "Competidores", "Partners"]         },         {             "name": "Propuesta de Valor",             "importance": 4,             "...
+2025-07-26 18:22:58,011 - app.services.study_plan_service - ERROR - Claude study plan generation failed: Invalid JSON in AI response: Expecting ',' delimiter: line 1 column 2506 (char 2505)
+2025-07-26 18:22:58,011 - app.services.study_plan_service - ERROR - Error generating AI study plan: Invalid JSON in AI response: Expecting ',' delimiter: line 1 column 2506 (char 2505)
+2025-07-26 18:22:58,015 - app.api.routes - INFO - Generated study plan 38b0abdb-6893-484b-89fd-3ee0d6ca53ef in 14.08s
+2025-07-26 18:25:06,765 - root - INFO - Studium backend shutting down...
+2025-07-26 18:25:07,983 - root - INFO - Studium backend starting up...
+2025-07-26 18:25:47,387 - root - INFO - Studium backend shutting down...
+2025-07-26 18:25:48,988 - root - INFO - Studium backend starting up...
+2025-07-26 18:26:32,342 - root - INFO - Studium backend shutting down...
+2025-07-26 18:26:33,497 - root - INFO - Studium backend starting up...
+2025-07-26 18:48:22,516 - root - INFO - Studium backend shutting down...
+2025-07-26 18:48:24,399 - root - INFO - Studium backend starting up...
+2025-07-26 18:50:46,163 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/5e164d8b-ff1f-4d11-a73f-b18e87c97b3c.pdf
+2025-07-26 18:50:46,166 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> 5e164d8b-ff1f-4d11-a73f-b18e87c97b3c
+2025-07-26 18:50:46,252 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 18:50:46,255 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 18:51:14,503 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 18:51:14,527 - app.api.routes - INFO - Generated study plan 668da196-ff76-4660-8435-f994c0c0b466 in 15.19s
+2025-07-26 18:54:44,185 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/069a5c98-2044-42b7-ae5e-85f02718b9d5.pdf
+2025-07-26 18:54:44,199 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> 069a5c98-2044-42b7-ae5e-85f02718b9d5
+2025-07-26 18:54:44,348 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 18:54:44,350 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 18:55:08,487 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 18:55:08,502 - app.api.routes - INFO - Generated study plan 2b7ec827-606e-415c-b695-d5c22cce8ccc in 13.94s
+2025-07-26 18:59:13,104 - root - INFO - Studium backend shutting down...
+2025-07-26 18:59:15,919 - root - INFO - Studium backend starting up...
+2025-07-26 18:59:29,705 - root - INFO - Studium backend shutting down...
+2025-07-26 18:59:30,805 - root - INFO - Studium backend starting up...
+2025-07-26 19:00:01,738 - root - INFO - Studium backend shutting down...
+2025-07-26 19:00:02,857 - root - INFO - Studium backend starting up...
+2025-07-26 19:00:11,127 - root - INFO - Studium backend shutting down...
+2025-07-26 19:00:12,244 - root - INFO - Studium backend starting up...
+2025-07-26 19:03:47,854 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/cb17f33f-86e0-4b11-9942-cdfaea8300b0.pdf
+2025-07-26 19:03:47,872 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> cb17f33f-86e0-4b11-9942-cdfaea8300b0
+2025-07-26 19:03:48,007 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 19:03:48,010 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 19:04:11,209 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 19:04:11,240 - app.api.routes - INFO - Generated study plan 7075797a-3569-41fe-854b-4b3418eb9649 in 14.92s
+2025-07-26 19:05:17,076 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/9ef859f2-cd11-488f-b9c9-11772a36caed.pdf
+2025-07-26 19:05:17,079 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> 9ef859f2-cd11-488f-b9c9-11772a36caed
+2025-07-26 19:05:17,221 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 19:05:17,223 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 19:05:40,832 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 19:05:40,854 - app.api.routes - INFO - Generated study plan aaae3a61-6732-4015-8bca-75a34b085fc7 in 14.23s
+2025-07-26 19:09:26,288 - app.services.document_processor - INFO - File saved: La primera guerra mundial.pdf -> uploads/696cc6ee-1367-4fa4-a066-1d4f3e93fed4.pdf
+2025-07-26 19:09:26,301 - app.api.routes - INFO - File uploaded successfully: La primera guerra mundial.pdf -> 696cc6ee-1367-4fa4-a066-1d4f3e93fed4
+2025-07-26 19:09:26,436 - app.services.document_processor - INFO - Extracted text from PDF: 34390 characters
+2025-07-26 19:09:26,439 - app.services.document_processor - INFO - Document processed successfully: 5484 words extracted
+2025-07-26 19:09:49,572 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 19:09:49,591 - app.api.routes - INFO - Generated study plan 7b94d356-4fb4-4edc-a52b-52892abb7aff in 13.46s
+2025-07-26 19:10:24,647 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 19:10:24,667 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 15.57s
+2025-07-26 19:10:25,372 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 19:10:25,379 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 16.29s

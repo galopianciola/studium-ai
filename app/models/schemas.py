@@ -116,6 +116,8 @@ class StudyTopic(BaseModel):
     importance: int = Field(..., ge=1, le=5, description="Importance level (1-5)")
     difficulty: str = Field(..., description="Difficulty level (easy, medium, hard)")
     description: str = Field(..., description="Brief description of the topic")
+    estimated_hours: Optional[float] = Field(default=None, description="Estimated study hours for this topic")
+    subtopics: Optional[List[str]] = Field(default=None, description="List of subtopics")
 
 class TimelineData(BaseModel):
     total_days: int = Field(..., description="Total days until exam")
@@ -148,6 +150,9 @@ class StudyPlanResponse(BaseModel):
     # Recommendations
     general_recommendations: List[str] = Field(..., description="General study recommendations")
     study_techniques: List[str] = Field(..., description="Recommended study techniques")
+    
+    # Document content for activity generation
+    document_text: str = Field(..., description="Original document text for generating activities")
     
     # Metadata
     language: str = Field(default="es", description="Language of the plan")
