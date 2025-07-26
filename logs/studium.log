@@ -1,0 +1,187 @@
+2025-07-23 05:34:02,116 - root - INFO - Studium backend starting up...
+2025-07-23 05:42:27,340 - root - INFO - Studium backend shutting down...
+2025-07-23 05:42:54,993 - root - INFO - Studium backend starting up...
+2025-07-23 05:43:03,937 - root - INFO - Studium backend shutting down...
+2025-07-23 05:43:06,020 - root - INFO - Studium backend starting up...
+2025-07-23 05:49:17,168 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 05:49:17,190 - app.services.claude_service - ERROR - Error generating flashcards with Claude: Expecting value: line 1 column 1 (char 0)
+2025-07-23 05:49:17,190 - app.services.unified_ai_service - WARNING - Failed to generate flashcards with claude: Expecting value: line 1 column 1 (char 0)
+2025-07-23 05:49:17,191 - app.api.routes - ERROR - Flashcard generation error: All AI services failed to generate flashcards
+2025-07-23 05:51:27,690 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 05:51:27,699 - app.services.claude_service - ERROR - Error generating flashcards with Claude: Expecting value: line 1 column 1 (char 0)
+2025-07-23 05:51:27,700 - app.services.unified_ai_service - WARNING - Failed to generate flashcards with claude: Expecting value: line 1 column 1 (char 0)
+2025-07-23 05:51:27,700 - app.api.routes - ERROR - Flashcard generation error: All AI services failed to generate flashcards
+2025-07-23 05:55:15,162 - root - INFO - Studium backend shutting down...
+2025-07-23 05:55:26,977 - root - INFO - Studium backend starting up...
+2025-07-23 05:55:41,395 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 05:55:41,420 - app.services.claude_service - INFO - Generated 2 flashcards in Spanish in 4.08s
+2025-07-23 06:00:25,900 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/538f4496-b35b-4f4c-9254-1fecc13f743c.pdf
+2025-07-23 06:00:25,902 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> 538f4496-b35b-4f4c-9254-1fecc13f743c
+2025-07-23 06:01:57,420 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-23 06:01:57,434 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-23 06:08:21,335 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 06:08:21,365 - app.services.claude_service - INFO - Generated 4 multiple choice questions in Spanish in 13.98s
+2025-07-23 06:10:58,772 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 06:10:58,795 - app.services.claude_service - INFO - Generated summary in Spanish in 11.42s
+2025-07-23 11:40:09,491 - root - INFO - Studium backend shutting down...
+2025-07-23 11:40:12,006 - root - INFO - Studium backend starting up...
+2025-07-23 11:40:37,632 - root - INFO - Studium backend shutting down...
+2025-07-23 11:40:39,054 - root - INFO - Studium backend starting up...
+2025-07-23 11:41:01,139 - root - INFO - Studium backend shutting down...
+2025-07-23 11:41:02,218 - root - INFO - Studium backend starting up...
+2025-07-23 11:46:39,945 - root - INFO - Studium backend shutting down...
+2025-07-23 11:46:41,471 - root - INFO - Studium backend starting up...
+2025-07-23 11:49:08,305 - app.services.document_processor - INFO - File saved: brief de ideas.pdf -> uploads/4770a269-c2d1-42a0-9a73-b425a81c3798.pdf
+2025-07-23 11:49:08,307 - app.api.routes - INFO - File uploaded successfully: brief de ideas.pdf -> 4770a269-c2d1-42a0-9a73-b425a81c3798
+2025-07-23 11:50:16,741 - app.services.document_processor - INFO - Extracted text from PDF: 12467 characters
+2025-07-23 11:50:16,744 - app.services.document_processor - INFO - Document processed successfully: 1730 words extracted
+2025-07-23 11:53:56,976 - root - INFO - Studium backend shutting down...
+2025-07-23 11:53:57,985 - root - INFO - Studium backend starting up...
+2025-07-23 12:10:00,876 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/ff5693ee-929d-4589-adb9-ddc2974b4ecb.pdf
+2025-07-23 12:10:00,879 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> ff5693ee-929d-4589-adb9-ddc2974b4ecb
+2025-07-23 12:20:41,460 - root - INFO - Studium backend shutting down...
+2025-07-23 12:20:43,745 - root - INFO - Studium backend starting up...
+2025-07-23 12:23:41,609 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/7af37552-8f44-47c1-91b5-5054c1486f22.pdf
+2025-07-23 12:23:41,611 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> 7af37552-8f44-47c1-91b5-5054c1486f22
+2025-07-23 12:24:26,336 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-23 12:24:26,342 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-23 12:28:50,222 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 12:28:50,251 - app.services.claude_service - INFO - Generated summary in Spanish in 11.22s
+2025-07-23 12:32:44,705 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 12:32:44,728 - app.services.claude_service - INFO - Generated 5 multiple choice questions in Spanish in 14.34s
+2025-07-23 12:35:57,315 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 12:35:57,339 - app.services.claude_service - INFO - Generated 5 flashcards in Spanish in 14.88s
+2025-07-23 12:36:51,257 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-23 12:36:51,282 - app.services.claude_service - INFO - Generated 5 true/false questions in Spanish in 11.38s
+2025-07-23 13:18:29,250 - root - INFO - Studium backend shutting down...
+2025-07-26 03:01:58,167 - root - INFO - Studium backend starting up...
+2025-07-26 03:02:19,271 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/cb04ded2-a080-497e-b10c-e3a84466b32f.pdf
+2025-07-26 03:02:19,293 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> cb04ded2-a080-497e-b10c-e3a84466b32f
+2025-07-26 03:02:20,701 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-26 03:02:20,704 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-26 03:02:25,550 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-07-26 03:02:25,555 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-07-26 03:02:25,556 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-07-26 03:02:25,559 - anthropic._base_client - INFO - Retrying request to /v1/messages in 27.000000 seconds
+2025-07-26 03:02:25,560 - anthropic._base_client - INFO - Retrying request to /v1/messages in 27.000000 seconds
+2025-07-26 03:02:25,560 - anthropic._base_client - INFO - Retrying request to /v1/messages in 27.000000 seconds
+2025-07-26 03:02:38,656 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:02:38,681 - app.services.claude_service - INFO - Generated 2 multiple choice questions in Spanish in 14.38s
+2025-07-26 03:02:38,891 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:02:38,895 - app.services.claude_service - INFO - Generated 3 flashcards in Spanish in 14.56s
+2025-07-26 03:02:39,882 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:02:39,884 - app.services.claude_service - INFO - Generated 3 flashcards in Spanish in 15.57s
+2025-07-26 03:02:52,993 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-07-26 03:02:52,995 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-07-26 03:02:52,996 - anthropic._base_client - INFO - Retrying request to /v1/messages in 34.000000 seconds
+2025-07-26 03:02:52,997 - anthropic._base_client - INFO - Retrying request to /v1/messages in 34.000000 seconds
+2025-07-26 03:02:59,821 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:02:59,834 - app.services.claude_service - INFO - Generated 2 true/false questions in Spanish in 35.51s
+2025-07-26 03:03:27,406 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-07-26 03:03:27,410 - app.services.claude_service - ERROR - Error generating multiple choice questions with Claude: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (008da32e-e94c-4d10-82f3-c35c8c687823) of 40,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}
+2025-07-26 03:03:27,411 - app.services.unified_ai_service - WARNING - Failed to generate multiple choice with claude: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (008da32e-e94c-4d10-82f3-c35c8c687823) of 40,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}
+2025-07-26 03:03:27,411 - app.api.routes - ERROR - Multiple choice generation error: All AI services failed to generate multiple choice questions
+2025-07-26 03:03:33,909 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:03:33,915 - app.services.claude_service - INFO - Generated 2 true/false questions in Spanish in 69.59s
+2025-07-26 03:07:02,414 - root - INFO - Studium backend shutting down...
+2025-07-26 03:07:03,824 - root - INFO - Studium backend starting up...
+2025-07-26 03:07:14,171 - root - INFO - Studium backend shutting down...
+2025-07-26 03:07:15,180 - root - INFO - Studium backend starting up...
+2025-07-26 03:07:55,454 - root - INFO - Studium backend shutting down...
+2025-07-26 03:07:56,695 - root - INFO - Studium backend starting up...
+2025-07-26 03:09:08,216 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/f3525a58-1d64-4ab2-9afa-b0fef5b3ca8a.pdf
+2025-07-26 03:09:08,219 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> f3525a58-1d64-4ab2-9afa-b0fef5b3ca8a
+2025-07-26 03:09:09,388 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-26 03:09:09,395 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-26 03:10:31,208 - root - INFO - Studium backend shutting down...
+2025-07-26 03:10:32,903 - root - INFO - Studium backend starting up...
+2025-07-26 03:10:43,372 - root - INFO - Studium backend shutting down...
+2025-07-26 03:10:44,309 - root - INFO - Studium backend starting up...
+2025-07-26 03:10:56,033 - root - INFO - Studium backend shutting down...
+2025-07-26 03:10:57,001 - root - INFO - Studium backend starting up...
+2025-07-26 03:12:01,585 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/b554fc84-9c4a-4b10-89d8-56a5c70118cf.pdf
+2025-07-26 03:12:01,589 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> b554fc84-9c4a-4b10-89d8-56a5c70118cf
+2025-07-26 03:12:02,485 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-26 03:12:02,502 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-26 03:12:22,866 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:12:22,888 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 17.17s
+2025-07-26 03:12:22,890 - app.api.routes - ERROR - Mixed activities generation error: 1 validation error for ActivityResponse
+activity_type
+  Input should be 'flashcard', 'multiple_choice', 'true_false' or 'summary' [type=enum, input_value='mixed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/enum
+2025-07-26 03:12:24,291 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:12:24,293 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 18.60s
+2025-07-26 03:12:24,294 - app.api.routes - ERROR - Mixed activities generation error: 1 validation error for ActivityResponse
+activity_type
+  Input should be 'flashcard', 'multiple_choice', 'true_false' or 'summary' [type=enum, input_value='mixed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/enum
+2025-07-26 03:12:52,799 - root - INFO - Studium backend shutting down...
+2025-07-26 03:12:54,103 - root - INFO - Studium backend starting up...
+2025-07-26 03:13:39,548 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/a3334108-db58-413d-9beb-074593a03210.pdf
+2025-07-26 03:13:39,550 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> a3334108-db58-413d-9beb-074593a03210
+2025-07-26 03:13:40,426 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-26 03:13:40,435 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-26 03:14:02,771 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:14:02,792 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 19.11s
+2025-07-26 03:14:05,449 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:14:05,457 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 21.79s
+2025-07-26 03:17:27,120 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/6d69bf66-2c5e-4c16-a38c-9172cecdfb63.pdf
+2025-07-26 03:17:27,129 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> 6d69bf66-2c5e-4c16-a38c-9172cecdfb63
+2025-07-26 03:17:27,889 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 03:17:27,893 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 03:17:51,317 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:17:51,327 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 20.26s
+2025-07-26 03:17:53,458 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:17:53,470 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 22.44s
+2025-07-26 03:32:37,511 - app.services.document_processor - INFO - File saved: Vichy Argentina - Entrega final con Feedback.pdf -> uploads/61391692-5ad1-46ad-a84c-64196d23bd61.pdf
+2025-07-26 03:32:37,533 - app.api.routes - INFO - File uploaded successfully: Vichy Argentina - Entrega final con Feedback.pdf -> 61391692-5ad1-46ad-a84c-64196d23bd61
+2025-07-26 03:32:38,476 - app.services.document_processor - INFO - Extracted text from PDF: 42675 characters
+2025-07-26 03:32:38,485 - app.services.document_processor - INFO - Document processed successfully: 5715 words extracted
+2025-07-26 03:32:59,727 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:32:59,738 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 17.99s
+2025-07-26 03:33:01,065 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 03:33:01,076 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 19.30s
+2025-07-26 03:42:07,979 - root - INFO - Studium backend shutting down...
+2025-07-26 11:03:47,519 - root - INFO - Studium backend starting up...
+2025-07-26 11:16:33,369 - app.services.document_processor - INFO - File saved: Dialnet-MundialesDeFutbol-5228608.pdf -> uploads/537bb01f-9a92-4a74-a4ab-54f50c706d5d.pdf
+2025-07-26 11:16:33,373 - app.api.routes - INFO - File uploaded successfully: Dialnet-MundialesDeFutbol-5228608.pdf -> 537bb01f-9a92-4a74-a4ab-54f50c706d5d
+2025-07-26 11:16:34,605 - app.services.document_processor - INFO - Extracted text from PDF: 16866 characters
+2025-07-26 11:16:34,609 - app.services.document_processor - INFO - Document processed successfully: 2773 words extracted
+2025-07-26 11:16:55,614 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 11:16:55,632 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 17.56s
+2025-07-26 11:16:57,416 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 11:16:57,424 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 19.38s
+2025-07-26 12:29:36,977 - app.services.document_processor - INFO - File saved: Screenshot 2025-07-26 at 09.29.30.png -> uploads/1cc015f0-c25c-4242-a90b-a5798f4fcaf4.png
+2025-07-26 12:29:36,981 - app.api.routes - INFO - File uploaded successfully: Screenshot 2025-07-26 at 09.29.30.png -> 1cc015f0-c25c-4242-a90b-a5798f4fcaf4
+2025-07-26 12:29:39,559 - app.services.document_processor - INFO - Extracted text from image: 2285 characters
+2025-07-26 12:29:39,561 - app.services.document_processor - INFO - Document processed successfully: 397 words extracted
+2025-07-26 12:29:57,820 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 12:29:57,867 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 14.90s
+2025-07-26 12:30:02,470 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 12:30:02,475 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 19.53s
+2025-07-26 15:37:48,617 - app.services.document_processor - INFO - File saved: _CLEI_2024____Check_worthiness (5).pdf -> uploads/113f266c-439a-4c22-91d5-a011404b7e70.pdf
+2025-07-26 15:37:48,621 - app.api.routes - INFO - File uploaded successfully: _CLEI_2024____Check_worthiness (5).pdf -> 113f266c-439a-4c22-91d5-a011404b7e70
+2025-07-26 15:37:49,785 - app.services.document_processor - INFO - Extracted text from PDF: 55773 characters
+2025-07-26 15:37:49,792 - app.services.document_processor - INFO - Document processed successfully: 8151 words extracted
+2025-07-26 15:38:11,961 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 15:38:11,975 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 18.58s
+2025-07-26 15:38:12,010 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-26 15:38:12,019 - app.services.claude_service - INFO - Generated 7 mixed activities in es in 18.57s
+2025-07-26 17:32:13,441 - root - INFO - Studium backend shutting down...
+2025-07-26 17:32:16,138 - root - INFO - Studium backend starting up...
+2025-07-26 17:39:56,733 - root - INFO - Studium backend shutting down...
+2025-07-26 17:39:58,007 - root - INFO - Studium backend starting up...
+2025-07-26 17:40:59,314 - root - INFO - Studium backend shutting down...
+2025-07-26 17:41:00,496 - root - INFO - Studium backend starting up...
+2025-07-26 17:41:22,716 - root - INFO - Studium backend shutting down...
+2025-07-26 17:41:23,797 - root - INFO - Studium backend starting up...
+2025-07-26 17:41:47,305 - root - INFO - Studium backend shutting down...
+2025-07-26 17:41:48,296 - root - INFO - Studium backend starting up...
+2025-07-26 17:42:28,575 - root - INFO - Studium backend shutting down...
+2025-07-26 17:42:29,734 - root - INFO - Studium backend starting up...
+2025-07-26 17:42:41,274 - root - INFO - Studium backend shutting down...
+2025-07-26 17:42:42,251 - root - INFO - Studium backend starting up...
+2025-07-26 17:43:04,673 - root - INFO - Studium backend shutting down...
+2025-07-26 17:43:05,654 - root - INFO - Studium backend starting up...
+2025-07-26 17:44:27,821 - root - INFO - Studium backend shutting down...
+2025-07-26 17:44:28,990 - root - INFO - Studium backend starting up...

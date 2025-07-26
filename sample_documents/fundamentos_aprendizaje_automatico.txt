@@ -1,0 +1,104 @@
+Fundamentos del Aprendizaje Automático
+
+Introducción al Aprendizaje Automático
+
+El Aprendizaje Automático (Machine Learning, ML) es una rama de la inteligencia artificial (IA) que se centra en el desarrollo de algoritmos y modelos estadísticos que permiten a los sistemas informáticos mejorar su rendimiento en una tarea específica a través de la experiencia, sin ser programados explícitamente para cada escenario.
+
+Conceptos Clave:
+
+1. Tipos de Aprendizaje Automático
+
+   Aprendizaje Supervisado: Utiliza datos de entrenamiento etiquetados para aprender una función de mapeo desde las entradas hasta las salidas
+   - Ejemplos: Clasificación de correos electrónicos como spam o no spam
+   - Algoritmos comunes: Regresión lineal, máquinas de vectores de soporte, redes neuronales
+
+   Aprendizaje No Supervisado: Encuentra patrones ocultos en datos sin ejemplos etiquetados
+   - Ejemplos: Segmentación de clientes, detección de anomalías
+   - Algoritmos comunes: K-means, análisis de componentes principales
+
+   Aprendizaje por Refuerzo: Aprende a través de la interacción con un entorno usando recompensas y penalizaciones
+   - Ejemplos: Juegos, robótica, sistemas de recomendación adaptativos
+   - Conceptos clave: Agente, entorno, acciones, recompensas
+
+2. Algoritmos Fundamentales
+
+   Regresión Lineal: Predice valores continuos encontrando la línea de mejor ajuste
+   - Ecuación: y = mx + b
+   - Aplicaciones: Predicción de precios, análisis de tendencias
+
+   Árboles de Decisión: Toma decisiones a través de una serie de preguntas en estructura de árbol
+   - Ventajas: Fácil interpretación, manejo de datos categóricos y numéricos
+   - Desventajas: Tendencia al sobreajuste
+
+   Redes Neuronales: Imita la estructura del cerebro humano para procesar patrones complejos
+   - Componentes: Neuronas, capas, pesos, funciones de activación
+   - Aplicaciones: Reconocimiento de imágenes, procesamiento de lenguaje natural
+
+   Agrupamiento K-means: Agrupa puntos de datos similares
+   - Proceso: Selección de centroides, asignación de puntos, actualización iterativa
+   - Parámetro clave: Número de clusters (k)
+
+3. Preprocesamiento de Datos
+
+   Limpieza de datos: Eliminación o corrección de datos erróneos
+   - Tratamiento de valores faltantes
+   - Detección y manejo de valores atípicos
+
+   Selección de características: Elección de las variables de entrada más relevantes
+   - Métodos: Filtrado, envolvente, incrustado
+   - Beneficios: Reducción de dimensionalidad, mejora del rendimiento
+
+   Normalización: Escalado de datos a un rango estándar
+   - Min-Max: Escala entre 0 y 1
+   - Z-score: Media 0 y desviación estándar 1
+
+   División de datos: Separación en conjuntos de entrenamiento, validación y prueba
+   - Típicamente: 70% entrenamiento, 15% validación, 15% prueba
+   - Validación cruzada: Método para evaluar robustez del modelo
+
+4. Evaluación de Modelos
+
+   Métricas de Clasificación:
+   - Exactitud (Accuracy): Porcentaje de predicciones correctas
+   - Precisión (Precision): Verdaderos positivos entre todas las predicciones positivas
+   - Sensibilidad (Recall): Verdaderos positivos entre todos los casos positivos reales
+   - F1-Score: Media armónica de precisión y sensibilidad
+
+   Métricas de Regresión:
+   - Error Cuadrático Medio (MSE): Promedio de errores al cuadrado
+   - Error Absoluto Medio (MAE): Promedio de errores absolutos
+   - R-cuadrado: Proporción de varianza explicada por el modelo
+
+   Validación cruzada: Evaluación del rendimiento en múltiples subconjuntos de datos
+   - K-fold: División en k partes iguales
+   - Leave-one-out: Usar un solo ejemplo para prueba en cada iteración
+
+Aplicaciones Prácticas:
+
+- Reconocimiento de imágenes y visión por computadora
+- Procesamiento de lenguaje natural y chatbots inteligentes
+- Sistemas de recomendación personalizados
+- Detección de fraudes en transacciones financieras
+- Diagnóstico médico asistido por computadora
+- Vehículos autónomos y navegación inteligente
+- Algoritmos de trading financiero automatizado
+- Análisis predictivo en marketing y ventas
+
+Desafíos y Consideraciones:
+
+Sobreajuste (Overfitting): El modelo funciona bien con datos de entrenamiento pero mal con datos nuevos
+- Soluciones: Regularización, más datos de entrenamiento, validación cruzada
+
+Subajuste (Underfitting): El modelo es demasiado simple para capturar patrones subyacentes
+- Soluciones: Modelos más complejos, más características, menos regularización
+
+Sesgo en los datos: Datos de entrenamiento que llevan a predicciones injustas o inexactas
+- Importancia: Diversidad en datos, evaluación ética de algoritmos
+
+Requisitos computacionales: Necesidad de grandes cantidades de datos de entrenamiento de calidad
+- Consideraciones: Poder de procesamiento, almacenamiento, tiempo de entrenamiento
+
+Interpretabilidad: Balance entre rendimiento del modelo y capacidad de explicar decisiones
+- Modelos interpretables vs. cajas negras complejas
+
+El campo del aprendizaje automático continúa evolucionando rápidamente, con nuevas técnicas y aplicaciones emergiendo regularmente. Comprender estos fundamentos proporciona una base sólida para explorar temas más avanzados y implementaciones prácticas en diversos dominios.

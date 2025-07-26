@@ -1,0 +1,35 @@
+# FastAPI and server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Pydantic
+pydantic
+pydantic-settings
+
+# AI Models and LangChain
+openai
+anthropic
+langchain
+langchain-openai
+langchain-anthropic
+langchain-community
+
+# Vector Store and Embeddings
+faiss-cpu
+numpy
+
+# Document Processing
+PyMuPDF
+pytesseract
+Pillow
+
+# Utilities
+python-jose[cryptography]
+passlib[bcrypt]
+aiofiles
+
+# Development
+pytest
+pytest-asyncio
+requests
